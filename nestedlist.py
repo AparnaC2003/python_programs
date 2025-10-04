@@ -11,7 +11,8 @@ Note: If there are multiple students with the second lowest grade, order their n
 
 std_list=[]
 mark_list=[]
-n=int(input("enter the no. of students"))
+second_low=[]
+n=int(input("enter the no. of students : "))
 for i in range(n):
     name=input("enter the student name : ")
     mark=int(input("enter the mark : "))
@@ -28,4 +29,7 @@ second_lowest=set_ml[1]
 print("students with second lowest mark :")
 for i in std_list:
     if i[1]==second_lowest:
-        print(i[0])
+        second_low.append(i[0])
+second_low.sort()
+for i in second_low:
+    print(i)
